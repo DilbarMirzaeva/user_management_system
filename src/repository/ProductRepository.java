@@ -25,7 +25,7 @@ public class ProductRepository implements GenericRepository<Product> {
 
     @Override
     public List<Product> findAll() {
-        return List.of();
+        return listProduct;
     }
 
     @Override
@@ -40,9 +40,9 @@ public class ProductRepository implements GenericRepository<Product> {
             if (Objects.equals(product.getId(), Id)) {
                 product.setId(Id);
                 listProduct.add(entity);
+                break;
             }
         }
-
     }
 
     @Override
@@ -51,6 +51,7 @@ public class ProductRepository implements GenericRepository<Product> {
         for(Product product:listProduct){
             if(Objects.equals(product.getId(),Id)){
                 listProduct.remove(product);
+                break;
             }
         }
     }
