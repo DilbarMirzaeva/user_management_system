@@ -2,8 +2,12 @@ package model;
 
 import java.util.Objects;
 
-public class BaseEntity {
+public abstract class BaseEntity {
     private Long Id;
+
+    public BaseEntity(Long Id){
+        this.Id = Id;
+    }
 
     public Long getId() {
         return Id;
