@@ -5,7 +5,7 @@ import repository.OrderRepository;
 import repository.ProductRepository;
 import repository.UserRepository;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         UserRepository repo1=new UserRepository();
         User user1=new User(1L,"Revan");
