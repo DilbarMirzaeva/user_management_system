@@ -1,7 +1,12 @@
 package model;
 
-public class User {
+public class User extends BaseEntity{
     private String name;
+
+    public User(Long Id, String name){
+        super(Id);
+        this.name = name;
+    }
 
     public String getName() {
         return name;

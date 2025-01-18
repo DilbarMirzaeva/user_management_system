@@ -1,8 +1,15 @@
 package model;
 
-public class Order {
+public class Order extends BaseEntity{
     private Long userId;
     private Long productId;
+
+
+    public Order(Long Id, Long userId, Long productId){
+        super(Id);
+        this.userId = userId;
+        this.productId = productId;
+    }
 
     public Long getUserId() {
         return userId;

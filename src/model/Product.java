@@ -1,8 +1,15 @@
 package model;
 
-public class Product {
+public class Product extends BaseEntity{
     private String name;
     private double price;
+
+
+    public Product(Long Id, String name, double price){
+        super(Id);
+        this.name = name;
+        this.price = price;
+    }
 
     public String getName() {
         return name;
